@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --primary-color-500: #4CAF50;
+    --primary-color-700: #388E3C;
+    --text-color: #212121;
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('./fonts/CustomFont.woff2') format('woff2'),
+         url('./fonts/CustomFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
