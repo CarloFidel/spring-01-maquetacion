@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <title>Bookmark manager</title>
     <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="icon" href="./img/favicon-32x32.png" />
+    <link rel="icon" href="./img/favicon-32x32.png" type="img/png" />
   </head>
   <body>
     <header>
@@ -20,11 +20,11 @@
             /></a>
           </li>
           <li>
-            <ul>
+            <ul class="nav-list-user">
               <li><a href="features.html">FEATURES</a></li>
               <li><a href="pricing.html">PRICING</a></li>
               <li><a href="contact.html">CONTACT</a></li>
-              <li><a href="login.html">LOGIN</a></li>
+              <li><a class="accent" href="login.html">LOGIN</a></li>
             </ul>
           </li>
         </ul>
@@ -36,8 +36,8 @@
           <h1>A Simple Bookmark Manager</h1>
           <p>Organize your bookmarks efficiently and access them with ease.</p>
           <div class="buttons-container-hero">
-            <button>Get on Chrome</button>
-            <button>Get on Firefox</button>
+            <button class="primary-button">Get it on Chrome</button>
+            <button class="secondary-button">Get it on Firefox</button>
           </div>
         </div>
         <div class="div-img-hero-container"></div>
@@ -50,8 +50,11 @@
           fuga quia ea! Soluta debitis beatae culpa consequatur?
         </p>
         <div class="div-tags-features">
-          <button>Simple Bookmarking</button>
-          <button>Speedy Searching</button><button>Easy Sharing</button>
+          <ul>
+            <li>Simple Bookmarking</li>
+            <li>Speedy Searching</li>
+            <li>Easy Sharing</li>
+          </ul>
         </div>
         <div>
           <ul>
@@ -81,7 +84,7 @@
             <li>
               <div class="cards">
                 <figure>
-                  <img src="" alt="google-chrome-logo" />
+                  <img src="./img/logo-chrome.svg" alt="google-chrome-logo" />
                   <figcaption>Add to Chrome</figcaption>
                   <span>Minimum version 62</span>
                 </figure>
@@ -91,7 +94,7 @@
             <li>
               <div class="cards">
                 <figure>
-                  <img src="" alt="firefox-logo" />
+                  <img src="./img/logo-firefox.svg" alt="firefox-logo" />
                   <figcaption>Add to Firefox</figcaption>
                   <span>Minimum version 55</span>
                 </figure>
@@ -101,7 +104,7 @@
             <li>
               <div class="cards">
                 <figure>
-                  <img src="" alt="opera-logo" />
+                  <img src="./img/logo-opera.svg" alt="opera-logo" />
                   <figcaption>Add to Opera</figcaption>
                   <span>Minimum version 46</span>
                 </figure>
@@ -178,12 +181,12 @@
           <h2>Stay up-to-date with what we're doing</h2>
           <fieldset>
             <legend class="sr-only">Contact form</legend>
-            <label class="sr-only" for="email">Email address</label>
+            <label class=".label-hide" for="email">Email address</label>
             <input
               type="email"
               name="email"
               id="email"
-              placeholder="Enter your email address"
+              placeholder="Enter your addres"
               required
             />
             <button type="submit">Contact Us</button>
@@ -194,7 +197,7 @@
     <footer>
       <ul>
         <li>
-          <ul>
+          <ul class="foot-nav-items">
             <li>
               <a href=""
                 ><img src="./img/logo-bookmark.svg" alt="bookmark-logo"
@@ -206,7 +209,7 @@
           </ul>
         </li>
         <li>
-          <ul>
+          <ul class="foot-social-list">
             <li>
               <a href="#"
                 ><img src="./img/icon-facebook.svg" alt="facebook-logo"
