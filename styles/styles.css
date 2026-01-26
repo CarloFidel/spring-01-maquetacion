@@ -8,10 +8,10 @@
 
 :root {
   /* Brand */
-  --color-primary: #5368df;
-  --color-primary-hover: #495dcf;
+  --color-primary: #675df5;
+  --color-primary-hover: #303e8b;
   --color-accent: #fa5959;
-  --color-accent-hover: #e24c4c;
+  --color-accent-hover: #d14c4c;
 
   /* Text */
   --color-text-title: #242a45;
@@ -127,6 +127,27 @@ button {
 }
 
 /* ------------------------------------------------------
+Section FAQs
+------------------------------------------------------ */
+
+.section-FAQs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+
+  & ul{
+    list-style: none;
+  }
+
+}
+.acordeon{
+  display: flex;
+  justify-content: space-between;
+}
+/* ------------------------------------------------------
+header y nav
 ------------------------------------------------------ */
 nav {
   padding: 1.6rem 5.5rem;
@@ -164,7 +185,7 @@ Form
 
 .section-contact {
   background-color: var(--color-primary);
-  padding: 50px 20px;
+  padding: 50px 50px;
   display: flex;
   flex-direction: column;
 
@@ -174,10 +195,20 @@ Form
   }
 
   & form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    & p {
+      color: var(--color-bg-soft);
+      letter-spacing: 0.25rem;
+      font-size: 0.7rem;
+    }
     & h2 {
       text-align: center;
       color: var(--color-bg-soft);
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       letter-spacing: 0.1rem;
     }
 
@@ -194,6 +225,10 @@ Form
       background-color: var(--color-accent);
       font-size: 0.9rem;
       font-weight: 700;
+
+      &:hover {
+        background-color: var(--color-accent-hover);
+      }
     }
 
     & input {
@@ -202,6 +237,10 @@ Form
       border-radius: 5px;
       border: none;
       padding: 0px 20px;
+
+      &:focus {
+        outline: none;
+      }
 
       &::placeholder {
         color: var(--color-text-muted);
@@ -215,6 +254,7 @@ Form
       display: flex;
       flex-direction: column;
       gap: 20px;
+      width: 100%;
     }
   }
 }
