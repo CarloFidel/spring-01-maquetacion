@@ -54,3 +54,20 @@ function handleClick(item) {
 listaFeatures.forEach((item) => {
   item.addEventListener("click", () => handleClick(item));
 });
+
+/* ------------------------------------------------------------
+                          MENU 
+------------------------------------------------------------*/
+const menuBtn = document.querySelector(".menu-btn");
+const menuSection = document.querySelector(".section-menu");
+const menuCloseBtn = document.querySelector(".menu-close-btn");
+
+function handleClickOpenMenu() {
+  menuSection.classList.add("menu-open");
+}
+menuBtn.addEventListener("click", handleClickOpenMenu);
+
+function handleClickCloseMenu() {
+  menuSection.classList.remove("menu-open");
+}
+menuCloseBtn.addEventListener("click", handleClickCloseMenu);
