@@ -267,13 +267,25 @@ section-hero
 @media (min-width: 760px) {
   .section-hero {
     flex-direction: row-reverse;
-    & :not(:first-child) {
+
+    & .hero-title {
       text-align: left;
-      max-width: 70%;
+      padding: 0px 80px;
+      width: 600px;
+      margin-right: 400px;
     }
     & .buttons-container-hero {
       justify-content: flex-start;
     }
+  }
+  .img-hero-container {
+    width: 450px;
+    height: 450px;
+    top: -20px;
+    left: -200px;
+  }
+  .hero-img-bg{
+    width: 400px;
   }
 }
 
@@ -340,7 +352,7 @@ section-features
   bottom: 0px;
   width: 0px;
   height: 5px;
-  background-color: rgb(190, 126, 29);
+  background-color: rgb(190, 56, 29);
   transition: width 0.2s ease-in-out;
 }
 
@@ -406,7 +418,24 @@ section-features
   height: 300px;
   border-radius: 0.5rem;
 } */
+@media (min-width: 760px) {
+  .section-features {
+    padding: 0px 10%;
 
+    & ul {
+      flex-direction: row;
+      max-width: 70rem;
+      gap: 10px;
+
+      & li {
+        border: none;
+      }
+    }
+    & p {
+      width: 60%;
+    }
+  }
+}
 /* ------------------------------------------------------
 Cards
 ------------------------------------------------------ */
@@ -470,7 +499,30 @@ Cards
   height: 30px;
   margin: 10px 0px -20px 0px;
 }
+@media (min-width: 760px) {
+  .section-cards {
+    padding: 60px 10%;
 
+    & p {
+      width: 60%;
+    }
+  }
+  .div-cards-container ul {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+
+    & li {
+      margin-top: 0px;
+    }
+    & li:first-child {
+      margin-top: -40px;
+    }
+    & li:last-child {
+      margin-top: 40px;
+    }
+  }
+}
 /* ------------------------------------------------------
 Section FAQs
 ------------------------------------------------------ */
@@ -547,7 +599,15 @@ Section FAQs
 .not-active {
   height: 0px;
 }
+@media (min-width: 760px) {
+  .section-FAQs {
+    padding: 60px 10%;
 
+    & .subtitle-FAQs {
+      width: 60%;
+    }
+  }
+}
 /* ------------------------------------------------------
 Form
 ------------------------------------------------------ */
@@ -627,7 +687,26 @@ Form
     }
   }
 }
+@media (min-width: 760px) {
+  .section-contact {
+    padding: 80px 10%;
 
+    & form {
+      & fieldset {
+        width: 40rem;
+        flex-direction: row;
+
+        & button {
+          width: 10rem;
+        }
+      }
+
+      & input {
+        width: 100%;
+      }
+    }
+  }
+}
 /* ------------------------------------------------------
 Footer
 ------------------------------------------------------ */
