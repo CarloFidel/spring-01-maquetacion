@@ -1,0 +1,31 @@
+/* Slide base */
+.slider-container {
+  width: 100%;
+}
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+.element-feature {
+  flex: 0 0 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Ajustes responsivos básicos */
+@media (max-width: 768px) {
+  .element-feature {
+    flex-direction: column;
+    text-align: center;
+  }
+}

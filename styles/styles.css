@@ -275,13 +275,13 @@ section-hero
 }
 @media (min-width: 1000px) {
   .img-hero-container {
-    width: 450px;
-    height: 450px;
-    top: -20px;
-    left: -200px;
+    width: 400px;
+    height: 400px;
+    top: 20px;
+    left: -100px;
   }
   .hero-img-bg {
-    width: 100%;
+    width: 80%;
   }
 
   .hero-title {
@@ -312,16 +312,18 @@ section-features
     text-align: center;
   }
 
-  & :not(.ilustration-container, .elem-barra) {
+  &
+    :not(
+      .ilustration-container,
+      .elem-barra,
+      .feature-details p,
+      .element-feature,
+      .slider-container,
+      .slider
+    ) {
     padding: 10px 40px;
   }
 
-  & a {
-    text-align: center;
-    font-size: 1rem;
-    color: var(--color-text-body);
-    text-decoration: none;
-  }
   & p {
     text-align: center;
     margin-top: 10px;
@@ -347,11 +349,39 @@ section-features
       padding: 0px 15px;
       cursor: pointer;
       position: relative;
+      /*       cursor: pointer;
+ */
+      & p {
+        z-index: -10;
+      }
     }
 
     & li:not(:last-child) {
       border-bottom: none;
     }
+  }
+  & article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.feature-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 10%;
+  width: 30rem;
+
+  & h2 {
+    margin-top: 40px;
+  }
+
+  & p {
+    text-align: center;
+    line-height: 1.8rem;
   }
 }
 .elem-barra {
@@ -367,8 +397,6 @@ section-features
   position: relative;
   min-width: 420px;
   height: 18rem;
-  /*   border: 1px solid forestgreen;
- */
 }
 
 .feature-img-bg {
@@ -390,9 +418,9 @@ section-features
 }
 .feature-img-01 {
   background-image: url(../img/illustration-features-tab-1.svg);
-  width: 320px;
-  height: 320px;
-  left: 50px;
+  width: 270px;
+  height: 270px;
+  left: 70px;
 }
 .feature-img-02 {
   background-image: url(../img/illustration-features-tab-2.svg);
@@ -406,25 +434,34 @@ section-features
   height: 270px;
   left: 70px;
 }
+.slider-container {
+  overflow-x: hidden;
+  width: 480px;
+  overflow-x: hidden;
+}
+.slider {
+  display: flex;
+  justify-content: center;
+  transform: translateX(480px);
+  transition: transform 0.3s ease-in-out;
+}
+.foward-One {
+  transform: translateX(480px);
+}
+.back-One {
+  transform: translateX(0px);
+}
+.foward-Two {
+  transform: translateX(-480px);
+}
+.back-Two {
+  transform: translateX(-480px);
+}
 
 .barra-active {
   width: 200px;
 }
 
-/* .slider-wrapper {
-  max-width: 420px;
-  margin: 0 auto;
-  border: 2px solid black;
-} */
-/* .slider {
-  display: flex;
-  overflow: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  box-shadow: 0 0.225rem 0.5rem rgba(0, 0, 0, 0.3);
-  height: 300px;
-  border-radius: 0.5rem;
-} */
 @media (min-width: 760px) {
   .section-features {
     padding: 0px 10%;
@@ -438,8 +475,39 @@ section-features
         border: none;
       }
     }
-    & p {
-      width: 60%;
+  }
+  .slider-container {
+    width: 900px;
+    height: 300px;
+  }
+  .slider {
+    transform: translateX(900px);
+    width: 900px;
+    & .element-feature {
+      display: flex;
+    }
+  }
+  .foward-One {
+    transform: translateX(900px);
+  }
+  .back-One {
+    transform: translateX(0px);
+  }
+  .foward-Two {
+    transform: translateX(-900px);
+  }
+  .back-Two {
+    transform: translateX(-900px);
+  }
+  .feature-details {
+    align-items: flex-start;
+
+    p {
+      text-align: left;
+    }
+    h2 {
+      text-align: left;
+      margin-left: -40px;
     }
   }
 }
@@ -493,9 +561,10 @@ Cards
   justify-content: center;
   text-align: center;
   gap: 15px;
-  box-shadow: 0px 6px 17px rgba(125, 125, 125, 0.187);
+  box-shadow: 0px 6px 17px rgba(125, 125, 125, 0.392);
   padding: 2em 3rem;
   border-radius: 5px;
+  border: 1px solid rgba(125, 125, 125, 0.161);
 }
 
 .div-img-dot-container {
@@ -769,9 +838,9 @@ footer {
   }
   .logo-foot-container {
     display: flex;
-    align-items: center;  
+    align-items: center;
     background-color: red;
-    }
+  }
 }
 /* ------------------------------------------------------
 MENU
