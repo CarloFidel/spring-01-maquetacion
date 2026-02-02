@@ -75,8 +75,6 @@ function handleClickCloseMenu() {
 }
 menuCloseBtn.addEventListener("click", handleClickCloseMenu);
 
-// ...existing code...
-
 /* ------------------------------------------------------------
                           SLIDE 
 ------------------------------------------------------------*/
