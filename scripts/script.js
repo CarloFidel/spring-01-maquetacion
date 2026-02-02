@@ -2,7 +2,7 @@
                         ACORDEON 
 ------------------------------------------------------------*/
 
-const acordeon = document.querySelectorAll("#acordeonItem");
+const acordeon = document.querySelectorAll(".acordeon-item");
 
 function cleanEvent(panelToShow) {
   const panels = document.querySelectorAll(".panel");
